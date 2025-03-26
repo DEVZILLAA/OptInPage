@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opt-In Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer src="script.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("A6utiyj3Mad1SHrDc"); // Replace with your EmailJS public key
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Join Newsletter Button -->
+    <div id="overlay">
+        <button id="joinBtn">Join Our Newsletter</button>
+    </div>
+
+    <!-- Newsletter Form -->
+    <div class="container" id="newsletterForm">
+        <h2>Subscribe to Our Newsletter</h2>
+        <input type="text" id="fullName" placeholder="Enter your name">
+        <input type="email" id="email_id" placeholder="Enter your email">
+        <button onclick="SendMail()">Subscribe</button>
+        <p id="message"></p> <!-- Alert message appears here -->
+    </div>
+
+</body>
+</html>
